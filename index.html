@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheongchun Guesthouse - Gyeongju | 청춘호스텔</title>
+    <meta name="description" content="A serene, affordable guesthouse with ancient royal tomb views in Gyeongju. 황리단길 근처 가성비 좋은 숙소, 조식 제공.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar hidden-on-load">
+        <div class="nav-container">
+            <div class="logo">
+                <span data-i18n="nav.logo">Cheongchun</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+                <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+                <a href="#contact" data-i18n="nav.contact">Location</a>
+                <button id="lang-toggle" class="lang-btn">KR</button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav">
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+            <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+            <a href="#contact" data-i18n="nav.contact">Location</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <img src="assets/hero.png" alt="Cheongchun Guesthouse View" loading="lazy">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="fade-up" data-i18n="hero.title">Cheongchun Guesthouse</h1>
+            <p class="fade-up delay-1" data-i18n="hero.subtitle">Your peaceful retreat by the ancient royal tombs of Gyeongju.</p>
+            <a href="#about" class="btn fade-up delay-2" data-i18n="hero.cta">Explore</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text slide-in-left">
+                    <h2 class="section-title" data-i18n="about.title">A Blend of History & Comfort</h2>
+                    <p data-i18n="about.p1">Nestled just steps away from the bustling Hwangnidan-gil and overlooking the serene Daereungwon Tomb Complex, Cheongchun Guesthouse offers an unforgettable Gyeongju experience.</p>
+                    <p data-i18n="about.p2">Our guesthouse was famously featured in the movie "Gyeongju", capturing the timeless essence and romantic tranquility of this historic city.</p>
+                </div>
+                <div class="about-stats slide-in-right">
+                    <div class="stat-card">
+                        <h3 data-i18n="about.stat1.val">10 min</h3>
+                        <p data-i18n="about.stat1.label">Walk to Hwangnidan-gil</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 data-i18n="about.stat2.val">Tomb View</h3>
+                        <p data-i18n="about.stat2.label">Daereungwon Complex</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section bg-light">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="section-title" data-i18n="rooms.title">Cozy Accommodations</h2>
+                <p class="section-subtitle" data-i18n="rooms.subtitle">Affordable and comfortable rooms catering to couples, families, and friends.</p>
+            </div>
+            
+            <div class="room-showcase fade-up">
+                <div class="room-image">
+                    <img src="assets/room.png" alt="Guesthouse Room Interior" loading="lazy">
+                </div>
+                <div class="room-details">
+                    <h3 data-i18n="rooms.card.title">Standard / Tomb View Rooms</h3>
+                    <p class="price" data-i18n="rooms.card.price">From ₩50,000 / night (2 guests)</p>
+                    <ul class="room-features">
+                        <li><span class="icon">🛏️</span> <span data-i18n="rooms.feat1">Accommodates 2 to 6 guests</span></li>
+                        <li><span class="icon">✨</span> <span data-i18n="rooms.feat2">Clean white bedding</span></li>
+                        <li><span class="icon">🪞</span> <span data-i18n="rooms.feat3">Full-length mirror</span></li>
+                        <li><span class="icon">❄️</span> <span data-i18n="rooms.feat4">Air conditioning & heating</span></li>
+                    </ul>
+                    <a href="#contact" class="btn outline-btn mt-4" data-i18n="rooms.book">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="section-title" data-i18n="amenities.title">Included Services</h2>
+                <p class="section-subtitle" data-i18n="amenities.subtitle">Everything you need for a comfortable stay.</p>
+            </div>
+
+            <div class="amenities-grid">
+                <!-- Breakfast Card -->
+                <div class="amenity-card fade-up">
+                    <img src="assets/breakfast.png" alt="Free Breakfast" class="amenity-img" loading="lazy">
+                    <div class="amenity-info">
+                        <h3 data-i18n="amenities.bf.title">Complimentary Breakfast</h3>
+                        <p data-i18n="amenities.bf.desc">Enjoy famous Gyeongju Chalboribbang (barley bread), fresh salad, and coffee from 8:30 to 9:40 AM.</p>
+                    </div>
+                </div>
+
+                <div class="amenities-list fade-up delay-1">
+                    <div class="amenity-item">
+                        <div class="icon-circle">🚗</div>
+                        <h4 data-i18n="amenities.list1.title">Free Parking</h4>
+                        <p data-i18n="amenities.list1.desc">Convenient on-site parking available.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-circle">📶</div>
+                        <h4 data-i18n="amenities.list2.title">Free WiFi</h4>
+                        <p data-i18n="amenities.list2.desc">High-speed internet in all areas.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-circle">🧳</div>
+                        <h4 data-i18n="amenities.list3.title">Baggage Storage</h4>
+                        <p data-i18n="amenities.list3.desc">Leave your bags and explore freely.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="icon-circle">🛎️</div>
+                        <h4 data-i18n="amenities.list4.title">24h Front Desk</h4>
+                        <p data-i18n="amenities.list4.desc">Always here to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section bg-dark text-light">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <h2 class="section-title text-light" data-i18n="contact.title">Get in Touch</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span data-i18n="contact.address">31, Taejong-ro 727beon-gil, Gyeongju-si, Gyeongsangbuk-do</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>0507-1423-0909</span>
+                        </li>
+                        <li>
+                            <span class="icon">🕒</span>
+                            <span data-i18n="contact.time">Check-in 16:00 | Check-out 11:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-container fade-up delay-1">
+                    <!-- Placeholder map styling to avoid real API keys -->
+                    <div class="map-placeholder">
+                        <span data-i18n="contact.map">Map View: Near Hwangnidan-gil & Daereungwon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span id="year"></span> Cheongchun Guesthouse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
