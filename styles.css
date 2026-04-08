@@ -416,23 +416,31 @@ h1, h2, h3, h4 {
 }
 
 .room-single-image {
-    height: 250px;
+    min-height: 250px;
     background: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
     position: relative;
     overflow: hidden;
 }
 
+.room-single-image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #888;
+}
+
+.room-single-image img ~ span {
+    display: none;
+}
+
 .room-single-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
     transition: transform 0.8s ease;
 }
 
