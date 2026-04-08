@@ -398,6 +398,58 @@ h1, h2, h3, h4 {
     font-size: 1.2rem;
 }
 
+.room-group {
+    margin-bottom: 5rem;
+}
+
+.room-single-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: var(--transition);
+}
+
+.room-single-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.room-single-image {
+    height: 250px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.room-single-card:hover .room-single-image img {
+    transform: scale(1.05);
+}
+
+.room-single-info {
+    padding: 2rem;
+}
+
+.room-single-info h4 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 /* Amenities */
 .amenities-grid {
     display: grid;
