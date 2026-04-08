@@ -81,25 +81,56 @@
     <section id="rooms" class="section bg-light">
         <div class="container">
             <div class="text-center fade-in">
-                <h2 class="section-title" data-i18n="rooms.title">Cozy Accommodations</h2>
-                <p class="section-subtitle" data-i18n="rooms.subtitle">Affordable and comfortable rooms catering to couples, families, and friends.</p>
+                <h2 class="section-title" data-i18n="rooms.title">Our Rooms & Accommodations</h2>
+                <p class="section-subtitle" data-i18n="rooms.subtitle">Welcome to your home away from home. Find your perfect space to rest and recharge below.</p>
             </div>
             
-            <div class="room-showcase fade-up">
-                <div class="room-image">
-                    <img src="assets/room.png" alt="Guesthouse Room Interior" loading="lazy">
-                </div>
-                <div class="room-details">
-                    <h3 data-i18n="rooms.card.title">Standard / Tomb View Rooms</h3>
-                    <p class="price" data-i18n="rooms.card.price">From ₩50,000 / night (2 guests)</p>
-                    <ul class="room-features">
-                        <li><span class="icon">🛏️</span> <span data-i18n="rooms.feat1">Accommodates 2 to 6 guests</span></li>
-                        <li><span class="icon">✨</span> <span data-i18n="rooms.feat2">Clean white bedding</span></li>
-                        <li><span class="icon">🪞</span> <span data-i18n="rooms.feat3">Full-length mirror</span></li>
-                        <li><span class="icon">❄️</span> <span data-i18n="rooms.feat4">Air conditioning & heating</span></li>
+            <div class="rooms-grid fade-up" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                
+                <div class="room-card" style="background: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;" data-i18n="rooms.level1.title">Level 1</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;" data-i18n="rooms.level1.desc">Enjoy easy access and comfortable, warmly lit spaces.</p>
+                    <ul class="room-features" style="margin-bottom: 0;">
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Twin Room:</strong> 2 Single Beds <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l1.r1">Ideal for: Friends or colleagues</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Standard Queen Room:</strong> 1 Queen Bed <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l1.r2">Ideal for: Solo travelers or couples</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Double Queen Room:</strong> 2 Queen Beds <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l1.r3">Ideal for: Small families or groups</span></div></li>
                     </ul>
-                    <a href="#contact" class="btn outline-btn mt-4" data-i18n="rooms.book">Book Now</a>
                 </div>
+
+                <div class="room-card" style="background: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;" data-i18n="rooms.level2.title">Level 2 (Main House)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;" data-i18n="rooms.level2.desc">Elevated comfort and quiet relaxation.</p>
+                    <ul class="room-features" style="margin-bottom: 0;">
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Twin Room:</strong> 2 Single Beds <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l2.r1">Ideal for: Traveling friends</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Standard Queen Room:</strong> 1 Queen Bed <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l2.r2">Ideal for: Solo guests or couples</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Double Queen Room:</strong> 2 Queen Beds <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l2.r3">Ideal for: Families or friends</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🛏️</span><div><strong>Family Queen Room:</strong> 1 Queen Bed + 1 Sofa Bed <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.l2.r4">Ideal for: Families with a child</span></div></li>
+                    </ul>
+                </div>
+
+                <div class="room-card" style="background: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;" data-i18n="rooms.house.title">Main House Suite</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;" data-i18n="rooms.house.desc">A fully-equipped house booking option.</p>
+                    <ul class="room-features" style="margin-bottom: 0;">
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🏠</span><div><strong>2-Bedroom Suite</strong></div></li>
+                        <li style="margin-bottom: 0.5rem; align-items: flex-start;"><span class="icon">🛏️</span> <span data-i18n="rooms.house.beds">3 Queen Beds</span></li>
+                        <li style="margin-bottom: 0.5rem; align-items: flex-start;"><span class="icon">✨</span> <span data-i18n="rooms.house.feats">Kitchen, 2 Baths, Washer, Fridge</span></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">👨‍👩‍👧‍👦</span> <span data-i18n="rooms.house.ideal">Ideal for: Larger families</span></li>
+                    </ul>
+                </div>
+
+                <div class="room-card" style="background: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;" data-i18n="rooms.separate.title">Separate Houses</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;" data-i18n="rooms.separate.desc">Detached studios strictly outside the main building for extra privacy.</p>
+                    <ul class="room-features" style="margin-bottom: 0;">
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🔑</span><div><strong>Studio 1:</strong> Kitchen, Washer, Fridge, Gas Stove <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.sep.s1">Ideal for: Longer stays</span></div></li>
+                        <li style="margin-bottom: 1rem; align-items: flex-start;"><span class="icon">🔑</span><div><strong>Studio 2:</strong> Kitchenette, Microwave, Fridge <br><span style="color: var(--text-light); font-size: 0.9em;" data-i18n="rooms.sep.s2">Ideal for: Couples or solo guests</span></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 fade-up delay-1">
+                <a href="#contact" class="btn" style="margin-top: 2rem;" data-i18n="rooms.book_btn">Reserve Your Room Today</a>
             </div>
         </div>
     </section>
