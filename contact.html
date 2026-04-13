@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - Cheongchun Guesthouse | 청춘호스텔</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <style>
+        body {
+            padding-top: 100px;
+            background-color: var(--bg-main);
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+        .navbar .logo { color: var(--text-main); }
+        .navbar .nav-links a { color: var(--text-main); }
+        .navbar .mobile-menu-btn span { background-color: var(--text-main); }
+        .lang-btn { background: rgba(0,0,0,0.05); color: var(--text-main); }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;"><span data-i18n="nav.logo">Cheongchun</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#about" data-i18n="nav.about">About</a>
+                <a href="index.html#rooms" data-i18n="nav.rooms">Rooms</a>
+                <a href="amenities.html" data-i18n="nav.amenities">Amenities</a>
+                <a href="recommendations.html" data-i18n="nav.recom">Places to Go</a>
+                <a href="contact.html" data-i18n="nav.contact" style="color: var(--primary);">Location</a>
+                <button id="lang-toggle" class="lang-btn">KR</button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav">
+            <a href="index.html#about" data-i18n="nav.about">About</a>
+            <a href="index.html#rooms" data-i18n="nav.rooms">Rooms</a>
+            <a href="amenities.html" data-i18n="nav.amenities">Amenities</a>
+            <a href="recommendations.html" data-i18n="nav.recom">Places to Go</a>
+            <a href="contact.html" data-i18n="nav.contact" style="color: var(--primary);">Location</a>
+        </div>
+    </nav>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section bg-dark text-light" style="min-height: calc(100vh - 200px);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <h2 class="section-title text-light" data-i18n="contact.title">Get in Touch</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span data-i18n="contact.address">31, Taejong-ro 727beon-gil, Gyeongju-si, Gyeongsangbuk-do</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>0507-1423-0909</span>
+                        </li>
+                        <li>
+                            <span class="icon">🕒</span>
+                            <span data-i18n="contact.time">Check-in 16:00 | Check-out 11:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-container fade-up delay-1">
+                    <div class="map-placeholder">
+                        <span data-i18n="contact.map">Map View: Near Hwangnidan-gil & Daereungwon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span id="year"></span> Cheongchun Guesthouse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
