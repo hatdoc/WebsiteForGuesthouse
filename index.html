@@ -27,6 +27,7 @@
                 <a href="#about" data-i18n="nav.about">About</a>
                 <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
                 <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+                <a href="#recommendations" data-i18n="nav.recom">Places to Go</a>
                 <a href="#contact" data-i18n="nav.contact">Location</a>
                 <button id="lang-toggle" class="lang-btn">KR</button>
             </div>
@@ -42,6 +43,7 @@
             <a href="#about" data-i18n="nav.about">About</a>
             <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
             <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+            <a href="#recommendations" data-i18n="nav.recom">Places to Go</a>
             <a href="#contact" data-i18n="nav.contact">Location</a>
         </div>
     </nav>
@@ -344,6 +346,39 @@
                         <div class="icon-circle">🛎️</div>
                         <h4 data-i18n="amenities.list4.title">24h Front Desk</h4>
                         <p data-i18n="amenities.list4.desc">Always here to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="section bg-light">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="section-title" data-i18n="recom.title">Host's Recommendations</h2>
+                <p class="section-subtitle" data-i18n="recom.subtitle">Discover beautiful places to visit near the guesthouse.</p>
+            </div>
+
+            <div class="rooms-grid" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="room-single-card fade-up">
+                    <div class="room-single-image">
+                        <!-- <img src="assets/hwangnidan.jpg" alt="Hwangnidan-gil"> -->
+                        <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                    </div>
+                    <div class="room-single-info">
+                        <h4 data-i18n="recom.place1.title">Hwangnidan-gil</h4>
+                        <p style="color: var(--text-light);" data-i18n="recom.place1.desc">A trendy street filled with cafes, restaurants, and shops in traditional Hanok buildings. Just a 10-minute walk away.</p>
+                    </div>
+                </div>
+                <div class="room-single-card fade-up delay-1">
+                    <div class="room-single-image">
+                        <!-- <img src="assets/daereungwon.jpg" alt="Daereungwon"> -->
+                        <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                    </div>
+                    <div class="room-single-info">
+                        <h4 data-i18n="recom.place2.title">Daereungwon Tomb Complex</h4>
+                        <p style="color: var(--text-light);" data-i18n="recom.place2.desc">Explore the ancient royal tombs of the Silla Kingdom. A serene historical park right by our guesthouse.</p>
                     </div>
                 </div>
             </div>
