@@ -669,10 +669,10 @@ h1, h2, h3, h4 {
 }
 
 .modal-content {
-    background: white;
-    width: 90%;
-    max-width: 900px;
-    max-height: 90vh;
+    background: var(--bg-main);
+    width: 95%;
+    max-width: 1200px;
+    max-height: 95vh;
     border-radius: var(--border-radius);
     position: relative;
     overflow-y: auto;
@@ -712,8 +712,16 @@ h1, h2, h3, h4 {
 }
 
 #modal-body .room-single-image {
-    min-height: 400px; /* Bigger image in modal */
+    min-height: 60vh; /* Bigger image in modal */
+    background: #000; /* Dark background for letterboxing uncropped image */
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+}
+
+#modal-body .room-single-image img,
+#modal-body .room-image-slider img {
+    object-fit: contain; /* Show the full uncropped image */
+    background: #000;
 }
 
 #modal-body .room-single-info {
