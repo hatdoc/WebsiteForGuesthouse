@@ -273,3 +273,57 @@ setTimeout(() => {
         }
     });
 }, 100);
+
+// Room Detail Modal Logic
+const modalOverlay = document.getElementById('room-modal');
+if (modalOverlay) {
+    const modalCloseBtn = document.getElementById('modal-close');
+    const modalBody = document.getElementById('modal-body');
+    const roomCards = document.querySelectorAll('.room-single-card');
+
+    roomCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Prevent opening if they clicked on something interactive inside already, though right now it's just cards
+            if (e.target.closest('a') || e.target.closest('button')) return;
+
+            // Clone the image and info sections
+            const imageSection = card.querySelector('.room-single-image').cloneNode(true);
+            const infoSection = card.querySelector('.room-single-info').cloneNode(true);
+
+            // Clear previous modal content
+            modalBody.innerHTML = '';
+
+            // Append cloned sections
+            modalBody.appendChild(imageSection);
+            modalBody.appendChild(infoSection);
+
+            // Show modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+
+    const closeModal = () => {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            modalBody.innerHTML = ''; // Clear after transition
+        }, 300);
+    };
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (e) => {
+        // Close if clicking outside the modal content box
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
