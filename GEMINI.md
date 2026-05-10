@@ -1,3 +1,3 @@
 # GEMINI Mandates
 
-- Push to branch once it is done.
+- Push to main branch once it is done.

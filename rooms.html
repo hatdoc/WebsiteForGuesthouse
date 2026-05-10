@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Cheongchun Guesthouse | 청춘호스텔</title>
+    <meta name="description"
+        content="A serene, affordable guesthouse with ancient royal tomb views in Gyeongju. 황리단길 근처 가성비 좋은 숙소, 조식 제공.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <style>
+        body { padding-top: 100px; background-color: var(--bg-light); }
+        .navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 1rem 0; }
+        .navbar .logo { color: var(--text-main); }
+        .navbar .nav-links a { color: var(--text-main); }
+        .navbar .mobile-menu-btn span { background-color: var(--text-main); }
+        .lang-btn { background: rgba(0,0,0,0.05); color: var(--text-main); }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar hidden-on-load">
+        <div class="nav-container">
+            <div class="logo">
+                <span data-i18n="nav.logo">Cheongchun</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+                <a href="amenities.html" data-i18n="nav.amenities">Amenities</a>
+                <a href="recommendations.html" data-i18n="nav.recom">Places to Go</a>
+                <a href="contact.html" data-i18n="nav.contact">Location</a>
+                <button id="lang-toggle" class="lang-btn">KR</button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav">
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+            <a href="amenities.html" data-i18n="nav.amenities">Amenities</a>
+            <a href="recommendations.html" data-i18n="nav.recom">Places to Go</a>
+            <a href="contact.html" data-i18n="nav.contact">Location</a>
+        </div>
+    </nav>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section bg-light">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="section-title" data-i18n="rooms.title">Our Rooms & Accommodations</h2>
+                <p class="section-subtitle" data-i18n="rooms.subtitle">Welcome to your home away from home. Find your
+                    perfect space to rest and recharge below.</p>
+            </div>
+
+            <div class="room-group fade-up">
+                <div class="text-center">
+                    <h3 class="section-title text-center" data-i18n="rooms.level1.title"
+                        style="border-left: none; padding-left: 0;">Level 1</h3>
+                    <p class="section-subtitle" data-i18n="rooms.level1.desc" style="margin-bottom: 2rem;">Enjoy easy
+                        access and comfortable, warmly lit spaces.</p>
+                </div>
+                <div class="rooms-grid"
+                    style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level1-twin.jpg" alt="Twin Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l1.twin.title">Twin Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l1.twin.beds">2 Single
+                                        Beds</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l1.twin.ideal">Ideal for:
+                                        Friends or colleagues</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level1-sq.jpg" alt="Standard Queen Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l1.sq.title">Standard Queen Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l1.sq.beds">1 Queen Bed</span>
+                                </li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l1.sq.ideal">Ideal for: Solo
+                                        travelers or couples</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level1-dq.jpg" alt="Double Queen Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l1.dq.title">Double Queen Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l1.dq.beds">2 Queen Beds</span>
+                                </li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l1.dq.ideal">Ideal for: Small
+                                        families or groups</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-group fade-up">
+                <div class="text-center">
+                    <h3 class="section-title text-center" data-i18n="rooms.level2.title"
+                        style="border-left: none; padding-left: 0;">Level 2 (Main House)</h3>
+                    <p class="section-subtitle" data-i18n="rooms.level2.desc" style="margin-bottom: 2rem;">Elevated
+                        comfort and quiet relaxation.</p>
+                </div>
+                <div class="rooms-grid"
+                    style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level2-twin.jpg" alt="Twin Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l2.twin.title">Twin Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l2.twin.beds">2 Single
+                                        Beds</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l2.twin.ideal">Ideal for:
+                                        Traveling friends</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level2-sq.jpg" alt="Standard Queen Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l2.sq.title">Standard Queen Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l2.sq.beds">1 Queen Bed</span>
+                                </li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l2.sq.ideal">Ideal for: Solo
+                                        guests or couples</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level2-dq.jpg" alt="Double Queen Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l2.dq.title">Double Queen Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l2.dq.beds">2 Queen Beds</span>
+                                </li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l2.dq.ideal">Ideal for: Families
+                                        or friends</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/level2-fq.jpg" alt="Family Queen Room"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.l2.fq.title">Family Queen Room</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.l2.fq.beds">1 Queen + 1 Sofa
+                                        Bed</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.l2.fq.ideal">Ideal for: Families
+                                        with a child</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-group fade-up">
+                <div class="text-center">
+                    <h3 class="section-title text-center" data-i18n="rooms.house.title"
+                        style="border-left: none; padding-left: 0;">Main House Suite</h3>
+                    <p class="section-subtitle" data-i18n="rooms.house.desc" style="margin-bottom: 2rem;">A
+                        fully-equipped house booking option.</p>
+                </div>
+                <div class="rooms-grid"
+                    style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <img src="assets/cat.png" alt="Main House Suite">
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.house.title">Main House Suite</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">🛏️</span> <span data-i18n="rooms.house.beds">3 Queen Beds</span>
+                                </li>
+                                <li><span class="icon">✨</span> <span data-i18n="rooms.house.feats">Kitchen, 2 Baths,
+                                        Washer, Fridge</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.house.ideal">Ideal for: Larger
+                                        families</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-group fade-up" style="margin-bottom: 0; margin-top: 4rem;">
+                <div class="text-center">
+                    <p style="font-size: 2rem; color: var(--primary); font-weight: 700; letter-spacing: 1.5px; margin-bottom: 1.5rem;"
+                        data-i18n="rooms.separate.prompt">Do you want something more private?</p>
+                    <h3 class="section-title text-center" data-i18n="rooms.separate.title"
+                        style="border-left: none; padding-left: 0;">Separate Houses</h3>
+                    <p class="section-subtitle" data-i18n="rooms.separate.desc" style="margin-bottom: 2rem;">Detached
+                        studios strictly outside the main building for extra privacy.</p>
+                </div>
+                <div class="rooms-grid"
+                    style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <div class="room-image-slider">
+                                <img src="assets/노서오삼%20room%201/20260329_160001.jpg" alt="Room 1 Image 1" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160003.jpg" alt="Room 1 Image 2" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160005.jpg" alt="Room 1 Image 3" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160007.jpg" alt="Room 1 Image 4" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160009.jpg" alt="Room 1 Image 5" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160010.jpg" alt="Room 1 Image 6" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160011.jpg" alt="Room 1 Image 7" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160012.jpg" alt="Room 1 Image 8" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160013.jpg" alt="Room 1 Image 9" class="slider-image" loading="lazy">
+                                <img src="assets/노서오삼%20room%201/20260329_160015.jpg" alt="Room 1 Image 10" class="slider-image" loading="lazy">
+                            </div>
+                            <div class="slider-hint" data-i18n="rooms.slider_hint">Swipe &rarr;</div>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.sep.s1.title">Room 1</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">✨</span> <span data-i18n="rooms.sep.s1.feats">Kitchen, Washer,
+                                        Fridge, Gas Stove</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.sep.s1.ideal">Ideal for: Longer
+                                        stays</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="room-single-card">
+                        <div class="room-single-image">
+                            <!-- <img src="assets/studio2.jpg" alt="Studio 2"> -->
+                            <span data-i18n="rooms.img_placeholder">Add Photo Here</span>
+                        </div>
+                        <div class="room-single-info">
+                            <h4 data-i18n="rooms.sep.s2.title">Studio 2</h4>
+                            <ul class="room-features" style="margin-bottom: 0;">
+                                <li><span class="icon">✨</span> <span data-i18n="rooms.sep.s2.feats">Kitchenette,
+                                        Microwave, Fridge</span></li>
+                                <li><span class="icon">👥</span> <span data-i18n="rooms.sep.s2.ideal">Ideal for: Couples
+                                        or solo guests</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 fade-up delay-1">
+                <a href="contact.html" class="btn" style="margin-top: 2rem;" data-i18n="rooms.book_btn">Reserve Your Room
+                    Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span id="year"></span> Cheongchun Guesthouse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
