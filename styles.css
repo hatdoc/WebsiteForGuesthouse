@@ -444,8 +444,49 @@ h1, h2, h3, h4 {
     transition: transform 0.8s ease;
 }
 
-.room-single-card:hover .room-single-image img {
+.room-single-card:hover .room-single-image img:not(.slider-image) {
     transform: scale(1.05);
+}
+
+.room-image-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.room-image-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.room-image-slider img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: none; /* Remove hover scale from slider images */
+}
+
+.slider-hint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 10;
+    backdrop-filter: blur(4px);
 }
 
 .room-single-info {
