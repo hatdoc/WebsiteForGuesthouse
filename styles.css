@@ -203,6 +203,9 @@ h1, h2, h3, h4 {
     color: white !important;
 }
 
+.mobile-controls {
+    display: none;
+}
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -648,6 +651,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
+    .mobile-controls { display: flex; align-items: center; gap: 1rem; }
     .mobile-menu-btn { display: block; }
     .hero-content h1 { font-size: 2.5rem; }
 }
