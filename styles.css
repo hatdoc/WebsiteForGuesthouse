@@ -402,6 +402,12 @@ h1, h2, h3, h4 {
     margin-bottom: 5rem;
 }
 
+.rooms-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
 .room-single-card {
     background: white;
     border-radius: var(--border-radius);
@@ -461,6 +467,7 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     z-index: 2;
+    -webkit-overflow-scrolling: touch;
 }
 
 .room-image-slider::-webkit-scrollbar {
@@ -690,19 +697,25 @@ h1, h2, h3, h4 {
     position: absolute;
     top: 15px;
     right: 20px;
-    background: transparent;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    font-size: 2.5rem;
-    color: var(--text-main);
+    font-size: 2rem;
+    color: white;
     cursor: pointer;
     z-index: 10;
-    transition: color 0.2s;
+    transition: background 0.2s, color 0.2s;
     line-height: 1;
-    text-shadow: 0 2px 10px rgba(255,255,255,0.8);
 }
 
 .modal-close-btn:hover {
-    color: var(--primary);
+    background: var(--primary);
+    color: white;
 }
 
 /* Modal Internal Layout overrides for cloned room elements */
@@ -738,10 +751,21 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        transform: translateY(100%);
+    }
+    .modal-overlay.active .modal-content {
+        transform: translateY(0);
+    }
     #modal-body .room-single-image {
-        min-height: 300px;
+        min-height: 40vh;
+        border-radius: 0;
     }
     #modal-body .room-single-info {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }

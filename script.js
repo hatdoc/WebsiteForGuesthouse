@@ -226,7 +226,7 @@ document.querySelectorAll('.fade-up, .fade-in, .slide-in-left, .slide-in-right')
 });
 
 // Language Toggle Logic
-const langBtn = document.getElementById('lang-toggle');
+const langBtns = document.querySelectorAll('.lang-btn');
 const translatableElements = document.querySelectorAll('[data-i18n]');
 
 function updateLanguage(targetLang) {
@@ -240,7 +240,9 @@ function updateLanguage(targetLang) {
     }
 
     // Determine target button label (show opposite lang)
-    langBtn.textContent = currentLang === 'en' ? 'KR' : 'EN';
+    langBtns.forEach(btn => {
+        btn.textContent = currentLang === 'en' ? 'KR' : 'EN';
+    });
     
     // Smooth transition out
     translatableElements.forEach(el => {
@@ -259,9 +261,15 @@ function updateLanguage(targetLang) {
     }, 300);
 }
 
-langBtn.addEventListener('click', () => {
-    const newLang = currentLang === 'en' ? 'kr' : 'en';
-    updateLanguage(newLang);
+langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const newLang = currentLang === 'en' ? 'kr' : 'en';
+        updateLanguage(newLang);
+        // On mobile, close menu after language change
+        if (mobileNav.classList.contains('active')) {
+            mobileNav.classList.remove('active');
+        }
+    });
 });
 
 // Trigger initial animations for items in viewport on load
